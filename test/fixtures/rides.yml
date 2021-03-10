@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  meeting_location: MyString
+  meeting_location_lat: 1.5
+  meeting_location_long: 1.5
+  start: 2021-03-10 10:22:41
+
+two:
+  name: MyString
+  type: 
+  meeting_location: MyString
+  meeting_location_lat: 1.5
+  meeting_location_long: 1.5
+  start: 2021-03-10 10:22:41
