@@ -15,6 +15,12 @@ class RidesController < ApplicationController
         render json: @ride, status: :created
     end
 
+    def update 
+        find_ride
+        @ride.update(ride_params)
+        render json: @ride
+    end
+
     def destroy
         find_ride
         @ride.destroy
