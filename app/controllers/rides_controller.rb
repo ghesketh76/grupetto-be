@@ -1,8 +1,10 @@
 class RidesController < ApplicationController
 
+    before_action :find_todo, only: [:update, :destroy]
+
     def index 
         @rides = Ride.all 
-        render json: @rides
+        render json: @rides, include: :user
     end
 
     def show 
