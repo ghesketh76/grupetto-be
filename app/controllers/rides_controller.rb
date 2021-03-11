@@ -1,10 +1,11 @@
 class RidesController < ApplicationController
 
-    before_action :find_todo, only: [:update, :destroy]
+    before_action :find_ride, only: [:update, :destroy]
+
 
     def index 
         @rides = Ride.all 
-        render json: @rides, include: :user
+        render json: @rides
     end
 
     def show 
@@ -44,7 +45,8 @@ class RidesController < ApplicationController
                                 :meeting_location_long,
                                 :start_time,
                                 :day_half,
-                                :day_of_week
+                                :day_of_week,
+                                :user_id
                                 )
     end
 end
