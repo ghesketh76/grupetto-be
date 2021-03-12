@@ -2,6 +2,11 @@ class UsersController < ApplicationController
 
     skip_before_action :authorized, only: [:create]
 
+    def profile 
+        @rides = Ride.all
+        render json: {user: current_user, rides: @rides}
+    end
+
     def create 
         @user = User.new(user_params)
 

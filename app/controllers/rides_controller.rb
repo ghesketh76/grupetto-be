@@ -1,11 +1,11 @@
 class RidesController < ApplicationController
 
     before_action :find_ride, only: [:update, :destroy]
-
+    
 
     def index 
         @rides = Ride.all 
-        render json: @rides
+        render json: @rides, include: :joinrides
     end
 
     def show 

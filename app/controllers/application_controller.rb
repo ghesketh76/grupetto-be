@@ -8,7 +8,8 @@ class ApplicationController < ActionController::API
         if auth_header 
             token = auth_header.split(" ")[1]
             begin
-                @user_id = JWT.decode(token, "secret secrets")[0]["user_id"]
+                user_id = JWT.decode(token, "secret secrets")[0]["user_id"]
+                @user = User.find(user_id)
             rescue JWT::DecodeError
                 nil
             end
