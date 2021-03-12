@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
     def profile 
         @rides = Ride.all
-        render json: {user: current_user, rides: @rides}
+        @joinrides = Joinride.all
+        render json: {user: current_user, rides: @rides, joinrides: @joinrides}
     end
 
     def create 

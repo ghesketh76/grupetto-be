@@ -6,7 +6,7 @@ class JoinridesController < ApplicationController
     end
 
     def create 
-        @joinride = Joinride.create(ride_id: params[:ride], user_id: params[:user])
+        @joinride = Joinride.create(ride_id: params[:ride_id], user_id: params[:user_id])
         render json: @joinride
     end
 end
