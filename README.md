@@ -1,24 +1,43 @@
-# README
+# Grupetto Backend API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## General Info
 
-Things you may want to cover:
+This is a backend API for the Grupetto webpage. It is built with Ruby on Rails and utilizes a SQL database. It has the capability to run RESTful actions on its controllers for New Users and for new rides using full auth.
 
-* Ruby version
+## Frontend
 
-* System dependencies
+https://github.com/ghesketh76/grupetto-fe
 
-* Configuration
 
-* Database creation
+## Technologies
+* Ruby - 2.6.1
+* Rails - 6.0.3
+* Puma - 4.1
+* SQLite3 - 1.4
+* Bcrypt - 3.1.7
+* JWT
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+To get started, clone the repository from github to your computer.
 
-* Services (job queues, cache servers, search engines, etc.)
+Then, CD into the repo directory and type the following commands into your terminal:
 
-* Deployment instructions
+```
+$ bundle install
+$ rails db:migrate
+$ rails s
 
-* ...
+```
+
+Note: Ensure the rails server is running on localhost:3000
+
+## Features
+* REST Controllers with Auth for new users and new rides
+
+
+## Contact
+
+Created by [Grant Hesketh](https://www.linkedin.com/in/granthesketh/) 
+
+Feel free to contact me!
